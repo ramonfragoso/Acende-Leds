@@ -3,7 +3,7 @@
 // Grupo:
 // José Ramon Fragoso da Silva
 // Katson Matheus
-// Vinicius Lacerda
+// José Vinicius Lacerda de Arruda
 // Diego da Silva Lima
 
 #include <stdio.h>
