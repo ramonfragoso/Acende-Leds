@@ -2,7 +2,7 @@
 // Projeto IC - 2016.2 
 // Grupo:
 // José Ramon Fragoso da Silva
-// Katson Matheus
+// Katson Matheus Luna Alves
 // José Vinicius Lacerda de Arruda
 // Diego da Silva Lima
 
@@ -138,7 +138,7 @@ void loop() {
     }
   	
   	
-// Parto responsável por converter de decimal para binário
+// Parte responsável por converter de decimal para binário
     if (x >= 8){
       		digitalWrite(led1, HIGH);
             x = x - 8;
