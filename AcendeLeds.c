@@ -2,7 +2,7 @@
 // Projeto IC - 2016.2 
 // Grupo:
 // José Ramon Fragoso da Silva
-// Katson Matheus Luna Alves
+// Katson Matheus
 // José Vinicius Lacerda de Arruda
 // Diego da Silva Lima
 
@@ -37,13 +37,15 @@ void setup() {
   pinMode(f, OUTPUT);
   pinMode(g, OUTPUT);
   
-  Serial.begin(9600);
-  Serial.println("Digite um numero(0 a 9):\n");
+  Serial.begin(9600); // Abre a porta serial, e define a taxa de dados para 9600 bps
+  Serial.println("Digite um numero(0 a 9):\n"); 
 }
 void loop() {
-  	char nleds = Serial.read();
-// Parte onde os LEDs certos são ativados 
-  	int x = nleds - '0';
+
+  	char nleds = Serial.read(); // Leitura da entrada pelo Serial Monitor
+  	int x = nleds - '0'; // Converte variavel nleds(char) para x(int)
+
+ // Parte onde os LEDs certos são ativados 
     if (nleds == '0'){
         digitalWrite(a, LOW);
 		digitalWrite(b, LOW);
@@ -138,7 +140,7 @@ void loop() {
     }
   	
   	
-// Parte responsável por converter de decimal para binário
+// Parto responsável por converter de decimal para binário
     if (x >= 8){
       		digitalWrite(led1, HIGH);
             x = x - 8;
@@ -158,8 +160,9 @@ void loop() {
     if (x >= 1){
     		digitalWrite(led4, HIGH);
     }
-    
-  	delay(1250);
+   
+  	delay(1250); // Tempo para os leds (binario) permanecerem acesos
+
   	digitalWrite(led1, LOW);
   	digitalWrite(led2, LOW);
   	digitalWrite(led3, LOW);
